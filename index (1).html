@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rami Nabi – Portfolio</title>
+<meta name="description" content="Portfolio for Rami Nabi, Økonomi & IT-studerende på Erhvervsakademi København.">
+<style>
+:root{--bg:#f7fafc;--card:#fff;--ink:#22343f;--mute:#5d7280;--acc:#3b5361;--soft:#c9e4ef;--line:#dde7ec}
+@media(prefers-color-scheme:dark){:root{--bg:#121b21;--card:#1a262d;--ink:#e8f0f4;--mute:#9bb0bc;--acc:#8cc4dc;--soft:#243844;--line:#2b3d47}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.w{max-width:960px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .w{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+header a{color:var(--ink);text-decoration:none;margin-left:20px;font-size:15px}
+header a:first-child{margin:0;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:70px 0 18px;color:var(--acc)}
+h2{font-size:1.7rem;margin:64px 0 18px}h3{margin:0;font-size:1.15rem}
+.lead{color:var(--mute);max-width:640px;font-size:1.1rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:34px 0}
+.steps div{background:var(--soft);border-radius:14px;padding:14px 16px;font-size:.92rem;color:var(--ink)}
+.steps b{display:block;font-size:1.05rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:12px 0;padding:0 20px}
+summary{cursor:pointer;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;color:var(--acc)}details[open] summary::after{content:"–"}
+summary small{display:block;color:var(--mute);font-size:.88rem}summary p{margin:2px 0 0;color:var(--mute);font-size:.95rem}
+.body{padding-bottom:18px}.body h4{margin:16px 0 4px;color:var(--acc);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+.body p,.body ul{margin:0}.body ul{padding-left:20px}
+.tags span{display:inline-block;background:var(--soft);border-radius:999px;padding:2px 12px;margin:3px 4px 0 0;font-size:.82rem}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.mini div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:.95rem}
+.mini b{display:block}.about{display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:start}
+.about img{width:200px;height:200px;border-radius:50%;object-fit:cover;background:var(--soft)}
+@media(max-width:700px){.about{grid-template-columns:1fr}}
+ul.plain{list-style:none;padding:0;margin:0}ul.plain li{padding:7px 0;border-bottom:1px solid var(--line)}ul.plain span{color:var(--mute);font-size:.9rem}
+.cta{background:var(--soft);border-radius:18px;padding:34px;margin:64px 0}
+.cta a{color:var(--acc);font-weight:700;font-size:1.15rem}
+footer{color:var(--mute);font-size:.88rem;padding:20px 0 40px}
+a{color:var(--acc)}
+</style>
+</head>
+<body>
+<header><div class="w"><a href="#">Rami Nabi</a><nav><a href="#projekter">Projekter</a><a href="#om">Om mig</a><a href="#kontakt">Kontakt</a></nav></div></header>
+<main class="w">
+
+<h1>Jeg kombinerer økonomi og IT for at løse virksomheders konkrete problemer.</h1>
+<p class="lead">Økonomi & IT-studerende på Erhvervsakademi København, 4. semester. Her er de projekter, jeg har lavet med virksomheder som Røde Kors, Norlys, Politiken og ista.</p>
+<div class="steps">
+<div><b>Kortlæg</b>BPMN og procesanalyse</div>
+<div><b>Regn på det</b>Budget og cost-benefit</div>
+<div><b>Automatisér</b>Power Apps og Power Automate</div>
+<div><b>Følg data</b>Dataflow og integrationer</div>
+</div>
+
+<h2 id="projekter">Udvalgte projekter</h2>
+<p class="lead">Alle projekter er lavet i grupper på 5–6 studerende i samarbejde med rigtige virksomheder. Klik på et projekt for at se udfordring, løsning og resultat.</p>
+
+<details open><summary><div><h3>Røde Kors: salgsoverblik til frivillige butikker</h3><small>3. semester, 2026</small><p>En Power Apps-løsning, der henter webshopdata fra Shopify og viser butikkerne deres salg.</p></div></summary><div class="body">
+<h4>Udfordringen</h4><p>Røde Kors' webshop omsætter for over 2,4 mio. kr. om året, men de 267 butikker kunne kun se deres samlede månedsomsætning. De vidste ikke, hvilke varer der solgte bedst, og kunne ikke sammenligne sig med hinanden.</p>
+<h4>Det gjorde vi</h4><ul><li>Kortlagde webshopprocessen fra donation til levering i BPMN og fandt, hvor den skaber værdi og spild.</li><li>Tegnede dataflowet før og efter løsningen (DFD as-is og to-be).</li><li>Byggede et Power Automate-flow, der henter data fra Shopify, og en Power Apps-app med omsætning, antal solgte varer, diagrammer og bestsellere pr. butik og periode.</li><li>Planlagde kvalitetssikring med rollebaseret adgang, datavalidering og brugertest med frivillige.</li></ul>
+<h4>Resultat</h4><p>En fungerende løsning, som vi demonstrerede for Røde Kors. Den gør rå salgstal til et overblik, som frivillige uden teknisk baggrund kan bruge.</p>
+<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>Shopify</span><span>BPMN</span><span>DFD</span></div></div></details>
+
+<details><summary><div><h3>Politiken Pulse: yngre læsere og digital modenhed</h3><small>3. semester, 2026</small><p>To konsulentrapporter og en modenhedsanalyse for JP/Politikens Hus.</p></div></summary><div class="body">
+<h4>Udfordringen</h4><p>Unge mangler hverken interesse for nyheder eller betalingsvilje, men Politikens digitale tilbud matcher ikke deres forventninger til fællesskab, personalisering og anonymitet.</p>
+<h4>Det gjorde vi</h4><ul><li>Vurderede Politikens modenhed inden for data og analytics med Kræmmergaards modenhedstrappe og placerede dem i generation 4.</li><li>Udviklede Politiken Pulse, et debat- og communityunivers, gennem en Design Thinking-proces.</li><li>Lavede skærmbilleder i Figma Make og beskrev, hvordan konceptet kan bygge på den eksisterende datainfrastruktur.</li><li>Analyserede implementering og drift efter omstruktureringen i 2026.</li></ul>
+<h4>Resultat</h4><p>En anbefaling om, at den største opgave er at bygge en ny brugeroplevelse oven på eksisterende systemer, ikke at bygge datafundamentet forfra.</p>
+<div class="tags"><span>Design Thinking</span><span>Modenhedstrappen</span><span>Figma Make</span><span>Konsulentrapport</span></div></div></details>
+
+<details><summary><div><h3>DR Daglig: hackathon</h3><small>3. semester, 2026</small><p>Et koncept, der skal gøre DR til en daglig digital vane for unge, udviklet under tidspres.</p></div></summary><div class="body">
+<h4>Udfordringen</h4><p>DR vil nå halvdelen af danskerne digitalt hver dag, men når ikke de unge på de platforme, de bruger dagligt.</p>
+<h4>Det gjorde vi</h4><ul><li>Valgte 15–24-årige, der sjældent bruger DR, som primær målgruppe.</li><li>Udviklede DR Daglig: korte, personaliserede klip, en daglig notifikation og en vej fra TikTok og Instagram ind til DR's egne platforme.</li><li>Beskrev brugerrejsen og koblede konceptet til DR's tre strategiske mål med konkrete KPI'er.</li></ul>
+<div class="tags"><span>Brugerrejse</span><span>Målgruppeanalyse</span><span>KPI'er</span></div></div></details>
+
+<details><summary><div><h3>ista: AI-agent til montører</h3><small>4. semester, 2026 (igangværende)</small><p>Et koncept for en AI-agent, der giver montører stemmestyret vejledning ud fra godkendt dokumentation.</p></div></summary><div class="body">
+<h4>Udfordringen</h4><p>ista's tekniske viden ligger spredt i dokumentation, og montørerne har brug for den rigtige vejledning, mens de står med opgaven og ofte ikke har hænderne fri.</p>
+<h4>Det gjorde vi</h4><ul><li>Analyserede ista's forretningsmodel og hvor langt de er fra digitalisering til egentlig digital transformation.</li><li>Designede dataflowet: godkendte manualer i SharePoint, et revisionsmodul med version og ejer, en Copilot-agent og et dashboard med brug og feedback.</li><li>Byggede en kontrolmekanisme ind, så uklare spørgsmål sendes videre til en fagperson (human-in-the-loop).</li><li>Afgrænsede prototypen til én målertype og ét installationsflow.</li></ul>
+<h4>Resultat</h4><p>Et afgrænset koncept med klare hypoteser, som prototypen skal teste i næste fase.</p>
+<div class="tags"><span>Microsoft Copilot</span><span>SharePoint</span><span>Power Platform</span><span>Digital transformation</span></div></div></details>
+
+<details><summary><div><h3>Norlys: trivselsværktøj til sælgere</h3><small>3. semester, 2026</small><p>Business case, budget og klikbar prototype for et værktøj, der fanger stress tidligt.</p></div></summary><div class="body">
+<h4>Udfordringen</h4><p>Sælgerne hos Norlys arbejder i op til fem systemer pr. kunde, hvilket gør salget langsomt og skaber stress. Der fandtes ikke et værktøj til at følge trivslen løbende.</p>
+<h4>Det gjorde vi</h4><ul><li>Designede en tilføjelse, der kan bygges ind uden at røre Norlys' igangværende systemintegration: daglig trivselsevaluering, salgsråd, kontakt til kolleger og besked til lederen ved stress.</li><li>Lagde et budget for udvikling, GDPR-rådgivning, kurser, pilottest og drift.</li><li>Beregnede, hvad én stresssygemelding koster pr. måned i sygedagpenge og tabt salg.</li><li>Byggede en klikbar prototype i Figma og pitchede løsningen.</li></ul>
+<h4>Resultat</h4><p>443.500 kr. i engangsinvestering og ca. 39.000 kr. om året i drift, sat over for et estimeret tab på 109.460 kr. for hver måned en sælger er sygemeldt med stress.</p>
+<p><a href="https://www.figma.com/make/HFHq8ewulT1woyNLW4thdr/Internal-Employee-Dashboard?t=bOvrMjmUNNlj8elH-20&fullscreen=1&preview-route=%2Fwellbeing" target="_blank" rel="noopener">Se prototypen i Figma</a></p>
+<div class="tags"><span>Business case</span><span>Budgettering</span><span>Figma</span><span>GDPR/DPIA</span></div></div></details>
+
+<details><summary><div><h3>Satair: hurtigere svar på supporthenvendelser</h3><small>2. semester, 2025</small><p>Cost-benefit-analyse af en feedbackløsning til et flyreservedelsfirma.</p></div></summary><div class="body">
+<h4>Udfordringen</h4><p>Mange af Satairs supporthenvendelser (over 1.000 om dagen) manglede vigtige oplysninger. Det gav forsinkelser, også når et fly stod stille og ventede på en reservedel.</p>
+<h4>Det gjorde vi</h4><ul><li>Sammenlignede en integreret kontaktformular med Hotjar-surveys og valgte formularen, fordi den giver bedre data og kobler direkte til Freshdesk.</li><li>Lavede en cost-benefit-analyse ved forskellige grader af forbedring.</li><li>Planlagde udviklingen med en work breakdown structure.</li></ul>
+<h4>Resultat</h4><p>184,8 % ROI ved blot 2 % forbedring og over 2.000 % ved 15 %. Løsningen blev ikke afprøvet i praksis, så tallene er estimater.</p>
+<div class="tags"><span>Cost-benefit</span><span>WBS</span><span>Freshdesk</span><span>Hotjar</span></div></div></details>
+
+<details><summary><div><h3>Peytz: integration efter et opkøb</h3><small>2. semester, 2025</small><p>Analyse af, hvordan Peytz kan blive en del af iO, og en teknisk test af integration til Jira.</p></div></summary><div class="body">
+<h4>Udfordringen</h4><p>Efter opkøbet havde Peytz spredte systemer, kulturforskelle og en integration på pause, hvilket skabte usikkerhed blandt medarbejderne.</p>
+<h4>Det gjorde vi</h4><ul><li>Fandt organisatoriske skævheder med McKinsey 7S og vurderede videndeling med Knowledge Management Maturity Model.</li><li>Brugte Kotters 8 trin til at vurdere forandringsprocessen.</li><li>Testede API-kald til Jira i Postman som proof of concept.</li></ul>
+<h4>Resultat</h4><p>Integrationen var teknisk mulig. De største barrierer var organisatoriske: styring, fælles platforme, dokumentationsstandarder og kommunikation.</p>
+<div class="tags"><span>Postman</span><span>Jira API</span><span>McKinsey 7S</span><span>Kotter</span></div></div></details>
+
+<h2>Øvrige projekter</h2>
+<div class="mini">
+<div><b>Nemlig.com</b>Digital proces for erstatningsvarer, der balancerer omkostninger og kundetilfredshed. 2. semester.</div>
+<div><b>IKEA</b>Hvordan IKEA Danmark kan skalere Buy Back & Resell med cirkulær forretningsmodelinnovation. 2. semester.</div>
+<div><b>LEGO</b>Strategisk analyse af LEGO og legetøjsbranchen med PESTEL, Porters five forces og SWOT. 1. semester.</div>
+<div><b>GUBI</b>App-koncept med målgruppeanalyse, value proposition og agil projektledelse. 1. semester.</div>
+<div><b>DigitalLead</b>Danmarks muligheder for grøn softwareudvikling set gennem Porters diamant og Triple Helix. 1. semester.</div>
+</div>
+
+<h2 id="om">Om mig</h2>
+<div class="about">
+<img src="rami.jpg" alt="Rami Nabi">
+<div>
+<p>Jeg læser Økonomi & IT på Erhvervsakademi København og søger praktik, hvor jeg kan bruge både forretningsforståelse og digitale værktøjer.</p>
+<p>Ved siden af studiet har jeg flere års erfaring med salg, kundeservice og logistik, bl.a. som sælger i hvidevareafdelingen hos Power. Det har lært mig at lytte til, hvad folk faktisk har brug for, før man foreslår en løsning.</p>
+<h3 style="margin-top:22px">Kompetencer</h3>
+<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>BPMN</span><span>DFD</span><span>Budget og cost-benefit</span><span>Figma</span><span>Excel</span></div>
+<h3 style="margin-top:22px">Sprog</h3>
+<p>Dansk, engelsk og arabisk (flydende), tysk (godt) og fransk (grundlæggende)</p>
+</div></div>
+
+<h3 style="margin:36px 0 6px">Erfaring</h3>
+<ul class="plain">
+<li><b>Sælger, hvidevareafdelingen, Power Herlev</b> <span>· Siden oktober 2025 · Salg og kunderådgivning</span></li>
+<li><b>Varevognschauffør, Rødgaards Import</b> <span>· 2024–2025 · Fuldtid, inkl. ADR-kursus</span></li>
+<li><b>Værnepligtig, Ryes Kaserne</b> <span>· Feb.–maj 2024</span></li>
+<li><b>Madlevering, Wolt</b> <span>· 2022–2025 · Deltid</span></li>
+<li><b>Au pair, USA</b> <span>· 2022–2023 · Fuldtid</span></li>
+<li><b>Brandambassadør, Eventure Booking</b> <span>· 2022–2024 · Deltid</span></li>
+<li><b>Servicemedarbejder, Bilka ToGo Kolding</b> <span>· 2021–2022 · Deltid</span></li>
+<li><b>U. 18 Piccolo, Nordisk Film Biografer</b> <span>· 2019–2021 · Deltid</span></li>
+</ul>
+
+<div class="cta" id="kontakt"><h2 style="margin:0 0 8px">Søger du en praktikant?</h2><p style="margin:0 0 12px">Skriv til mig, så sender jeg gerne mit CV.</p><a href="mailto:nabirami2@gmail.com">nabirami2@gmail.com</a></div>
+</main>
+<footer class="w">Rami Nabi, 2026</footer>
+</body>
+</html>
